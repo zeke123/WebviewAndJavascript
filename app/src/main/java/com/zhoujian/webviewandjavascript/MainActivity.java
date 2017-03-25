@@ -18,6 +18,7 @@ public class MainActivity extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         webview = (WebView) findViewById(R.id.webview);
         mTextView = (TextView) findViewById(R.id.text);
         Button button = (Button) findViewById(R.id.button);
@@ -28,6 +29,8 @@ public class MainActivity extends Activity
         webview.loadUrl("file:///android_asset/demo.html");
         //设置回调接口
         webview.addJavascriptInterface(this, "demo");
+
+        //webview调用js
 
         button.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
